@@ -3,6 +3,9 @@ import {establishConnection} from "./services/sqlConnectionService.js";
 import { booksRouter } from "./routes/booksRoute.js";
 import path from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const app = express();
 const PORT=process.env.PORT;
@@ -19,7 +22,7 @@ app.get('/',(req,res)=>{
 })
 establishConnection().then(()=>{
     console.log("PGSQL Connection success")
-    app.listen(PORT,'0.0.0.0',()=>{
+    app.listen(PORT,()=>{
         console.log(`http://127.0.0.1:${PORT}`);
     });
 })

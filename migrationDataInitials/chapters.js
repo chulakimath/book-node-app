@@ -1,6 +1,9 @@
 // insertChapters.js
 
 import { neon } from '@neondatabase/serverless';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 // Replace with your actual Neon connection string
 const sql = neon(process.env.PGSQL_URL);

@@ -3,6 +3,4 @@
 --
 2 close server
 --
-3 Run each file one by one with passing env 
---
-```node --env-file=.env file.js ```
+3 Run each file one by one
